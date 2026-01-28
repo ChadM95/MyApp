@@ -18,8 +18,9 @@ public class InfoController {
 
         Map<String, Object> m = new LinkedHashMap<>();
         m.put("App Name", env.getProperty("spring.application.name"));
-        m.put("server port", env.getProperty("server.port"));
         m.put("Java Version", System.getProperty("java.version"));
+        m.put("Spring Version", System.getProperty("spring.version"));
+        m.put("SpringBoot Version", System.getProperty("spring.boot.version"));
 
         return m;
     }
